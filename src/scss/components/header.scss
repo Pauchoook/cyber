@@ -1,0 +1,195 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--black-dark);
+  padding: 65px 0px 20px 0px;
+  z-index: 100;
+  @include tablet {
+    padding: 8px 0px;
+  }
+  &__container {
+    @include laptop-min {
+      @include flex-between;
+    }
+  }
+  &__burger-btn {
+    display: none;
+    @include laptop-min {
+      display: flex;
+      flex-direction: column;
+      width: 44px;
+      padding: 5px;
+      gap: 7px;
+      span {
+        display: block;
+        height: 2px;
+        width: 100%;
+        border-radius: 50%;
+        background-color: var(--primary-dark);
+        &:nth-child(2),
+        &:last-child {
+          width: 50%;
+        }
+      }
+    }
+  }
+  &__nav {
+    @include laptop-min {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      max-width: 280px;
+      width: 100%;
+      padding: 140px 40px 10px 40px;
+      overflow-y: auto;
+      background: url("@img/vector-logo.svg") top 0 right 0 / auto 100% no-repeat;
+      background-color: var(--black-dark);
+      z-index: 100;
+      transform: translateX(-280px);
+      transition: transform 0.4s ease;
+      &.open {
+        transform: translateX(0px);
+      }
+    }
+  }
+  &__nav-wrapper {
+    @include flex-center;
+    gap: 20px;
+    @include laptop-min {
+      position: relative;
+      align-items: start;
+      justify-content: start;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      gap: 5px;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    @include laptop {
+      gap: 20px;
+    }
+    @include laptop-min {
+      flex-direction: column;
+      gap: 5px;
+    }
+    a {
+      position: relative;
+      font-weight: 700;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      @include laptop {
+        font-size: 14px;
+      }
+      @include laptop-min {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 250%;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transition:
+          right 0.2s ease,
+          text-shadow 0.2s ease;
+      }
+      @include hover {
+        color: var(--cyan);
+        text-shadow: var(--cyan) 0 0 12px;
+        &::before {
+          right: 0;
+        }
+      }
+    }
+  }
+  &__logo {
+    display: block;
+    width: 260px;
+    @include laptop {
+      width: 200px;
+    }
+    @include mobile {
+      width: 120px;
+    }
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__social {
+    display: none;
+    @include laptop-min {
+      display: flex;
+      margin-top: 125px;
+    }
+  }
+  &__version {
+    display: none;
+    @include laptop-min {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 75px 0px 0px 0px;
+      color: var(--primary);
+      font-size: 16px;
+    }
+  }
+  &__burger-close {
+    display: none;
+    @include laptop-min {
+      @include flex-center;
+      position: fixed;
+      top: 35px;
+      left: -40px;
+      width: 40px;
+      height: 40px;
+      background-color: var(--primary);
+      color: var(--black-dark);
+      transition: left 0.4s ease;
+      &.active {
+        left: 280px;
+      }
+    }
+  }
+  &__icon-arrow {
+    width: 24px;
+    height: 24px;
+  }
+  &__cart {
+    display: none;
+    @include laptop-min {
+      @include flex-center;
+      position: relative;
+      width: 48px;
+      height: 48px;
+      background-color: var(--primary);
+    }
+  }
+  &__cart-number {
+    @include flex-center;
+    position: absolute;
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    background-color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    top: 2px;
+    right: 3px;
+  }
+  &__cart-icon {
+    width: 30px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,93 @@
+.cybershop {
+  position: relative;
+  padding: 230px 0px;
+  z-index: 1;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -2;
+  }
+  &::before {
+    background: linear-gradient(90deg, rgba(9, 8, 22, 0) 0%, #04070f 66.9%);
+  }
+  &::after {
+    background: black;
+    opacity: 0.5;
+  }
+  @include tablet {
+    padding: 90px 0px 50px 0px;
+  }
+  &__set {
+    position: absolute;
+    right: 200px;
+    top: -44px;
+    width: 920px;
+    z-index: -1;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__triangle {
+    position: absolute;
+    width: 855px;
+    top: 115px;
+    left: -225px;
+    z-index: -1;
+    @include tablet {
+      top: 30px;
+      left: -115px;
+      width: 330px;
+    }
+  }
+  &__car {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    @include mobile {
+      width: 200px;
+    }
+  }
+  &__body {
+    max-width: 675px;
+    margin-left: auto;
+  }
+  &__title {
+    margin-bottom: 80px;
+    @include tablet {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+  }
+  &__content {
+    font-family: "Roboto", sans-serif;
+    margin: 0px 0px 70px 0px;
+    font-size: 20px;
+    @include tablet {
+      font-size: 16px;
+      margin-bottom: 110px;
+    }
+  }
+  &__content-show {
+    position: absolute;
+    max-width: 1865px;
+    font-size: 64px;
+    color: rgba(160, 28, 173, 0.05);
+    top: 50px;
+    right: -700px;
+    z-index: -1;
+    @include tablet {
+      display: none;
+    }
+  }
+  &__btn {
+    margin-left: auto;
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+}

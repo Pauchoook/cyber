@@ -1,0 +1,30 @@
+.banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 88px 0px;
+  &__wrapper {
+    position: absolute;
+    display: flex;
+    transition: transform 5s linear;
+    @include laptop-min {
+      transition: transform 8s linear;
+    }
+    @include tablet {
+      transition: transform 12s linear;
+    }
+  }
+  &__item {
+    flex-shrink: 0;
+    padding: 0 20px;
+    color: var(--primary-dark);
+    transition: color 0.2s ease;
+    @include hover {
+      color: white;
+    }
+    svg {
+      fill: currentColor;
+    }
+  }
+}

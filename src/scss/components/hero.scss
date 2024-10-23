@@ -1,0 +1,142 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 110px 0px;
+  min-height: calc(100vh - 134px);
+  margin-top: 134px;
+  z-index: 1;
+  @include laptop {
+    min-height: calc(100vh - 124px);
+    margin-top: 124px;
+    padding: 80px 0px;
+  }
+  @include laptop-min {
+    min-height: calc(100vh - 133px);
+    margin-top: 133px;
+  }
+  @include tablet {
+    min-height: calc(100vh - 64px);
+    margin-top: 64px;
+  }
+  &::after, &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: black;
+  }
+  &::before {
+    opacity: 0.6;
+    z-index: -3;
+  }
+  &::after {
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 3s ease;
+  }
+  &.active {
+    &::after {
+      opacity: 0.6;
+    }
+  }
+  &__bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -4;
+    &--show {
+      z-index: -2;
+      opacity: 0;
+      transition: opacity .2s ease;
+      &.opacity-none {
+        opacity: 1;
+        z-index: -2;
+      }
+      &.opacity {
+        // animation: show 3s linear;
+        opacity: 0;
+      }
+    }
+  }
+  &__btn-chat {
+    width: fit-content;
+    position: absolute;
+    right: 20px;
+    top: 190px;
+
+    font-size: 20px;
+    line-height: 175%;
+    text-transform: uppercase;
+
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+    @include tablet {
+      top: 10px;
+      right: 25px;
+      line-height: 125%;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin: 0 auto;
+    @include tablet {
+      max-width: 335px;
+    }
+  }
+  &__content {
+    font-family: "Roboto", sans-serif;
+    margin: 0 auto;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    @include mobile {
+      max-width: 275px;
+    }
+  }
+  &__buttons {
+    @include flex-center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 145px;
+    @include tablet {
+      margin-top: 90px;
+      gap: 30px;
+    }
+  }
+  &__nav {
+    @include flex-between;
+    margin-top: 90px;
+    @include tablet {
+      margin-top: 70px;
+      justify-content: center;
+    }
+  }
+  &__nav-btn {
+    @include flex-center;
+    background-color: var(--primary-dark);
+    width: 70px;
+    height: 70px;
+    border: 1px solid var(--primary-dark);
+    color: white;
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      color: var(--primary-dark);
+      background-color: transparent;
+    }
+    @include tablet {
+      display: none;
+    }
+  }
+  &__nav-icon {
+    width: 50px;
+    height: 50px;
+  }
+}

@@ -1,0 +1,38 @@
+@import "./fonts/fonts";
+@import "./base/normalize";
+@import "./base/vars";
+@import "./base/templates";
+@import "./base/settings";
+@import "./base/media";
+@import "./base/body-config";
+@import "./base/config-container";
+
+// ui
+@import "./ui/button";
+@import "./ui/list";
+@import "./ui/title";
+@import "./ui/input";
+@import "./ui/select";
+
+// help
+@import "./help/social";
+@import "./help/modal";
+@import "./help/tow";
+@import "./help/scrollbar";
+@import "./help/service-tesla";
+@import "./help/section-overflow";
+@import "./help/slider-nav";
+
+// components
+@import "./components/header";
+
+@import "./components/hero";
+@import "./components/appointment";
+@import "./components/cybershop";
+@import "./components/all-services";
+@import "./components/projects";
+@import "./components/banner";
+@import "./components/app";
+@import "./components/contacts";
+
+@import "./components/footer";

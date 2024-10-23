@@ -1,0 +1,58 @@
+.tow {
+  &__select {
+    width: 100%;
+  }
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    @include mobile {
+      gap: 10px;
+    }
+  }
+  &__form-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 1 calc(50% - 10px);
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+  &__item-icon {
+    position: absolute;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+  }
+  &__item-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 1 calc(50% - 15px);
+    @include mobile {
+      flex-basis: calc(50% - 10px);
+    }
+  }
+  &__input-arrow {
+    position: absolute;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    color: var(--lunar);
+  }
+  &__form-btn {
+    margin-left: auto;
+    gap: 15px;
+    @include tablet {
+      margin: 10px auto 0px auto;
+    }
+  }
+  &__icon-bending {
+    width: 20px;
+    height: 44px;
+    &:last-child {
+      transform: rotate(180deg);
+    }
+  }
+}

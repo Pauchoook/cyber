@@ -1,0 +1,25 @@
+.title {
+  margin: 0;
+  text-transform: uppercase;
+}
+.title-1 {
+  font-size: 64px;
+  @include laptop {
+    font-size: 58px;
+  }
+  @include laptop-min {
+    font-size: 54px;
+  }
+  @include tablet {
+    font-size: 48px;
+  }
+}
+.title-2 {
+  font-size: 40px;
+  @include laptop-min {
+    font-size: 36px;
+  }
+  @include tablet {
+    font-size: 32px;
+  }
+}

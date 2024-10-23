@@ -1,0 +1,101 @@
+.footer {
+  padding: 65px 0px 10px 0px;
+  @include tablet {
+    padding-top: 25px;
+  }
+  &__container {
+    @include flex-between;
+    gap: 40px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+    }
+  }
+  &__logo {
+    display: block;
+    flex-shrink: 0;
+    width: 275px;
+  }
+  &__logo-img {
+    width: 100%;
+  }
+  &__nav {
+    @include laptop-min {
+      width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    row-gap: 40px;
+    @include mobile {
+      gap: 0px;
+      justify-content: center;
+    }
+    li {
+      @include mobile {
+        flex: 0 1 50%;
+      }
+    }
+    a {
+      display: block;
+      font-size: 16px;
+      text-transform: uppercase;
+      text-align: center;
+      transition: color 0.2s ease;
+      @include hover {
+        color: var(--cyan);
+      }
+      @include mobile {
+        line-height: 219%;
+        width: 100%;
+      }
+    }
+  }
+  &__bottom {
+    @include flex-center;
+    flex-direction: column;
+    margin-top: 35px;
+    @include tablet {
+      margin-top: 20px;
+    }
+  }
+  &__bottom-btn {
+    display: none;
+    margin: 0 auto;
+    font-size: 16px;
+    color: var(--primary);
+    text-transform: uppercase;
+    @include tablet {
+      display: block;
+    }
+  }
+  &__bottom-list {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    @include tablet {
+      margin-top: 20px;
+    }
+    @include mobile {
+      gap: 20px;
+    }
+    a {
+      font-size: 12px;
+      color: var(--gray);
+      transition: color .2s ease;
+      @include hover {
+        color: white;
+      }
+    }
+  }
+  &__copyright {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+    text-align: center;
+    color: var(--gray);
+  }
+}

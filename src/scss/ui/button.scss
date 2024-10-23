@@ -1,0 +1,151 @@
+.btn {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  color: inherit;
+}
+.btn-custom {
+  @include flex-center;
+  position: relative;
+  overflow: hidden;
+  max-width: 280px;
+  height: 70px;
+  width: 100%;
+  padding: 5px;
+
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+
+  z-index: 1;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    border-width: 2px;
+    border-style: solid;
+    z-index: -2;
+  }
+  &--pink {
+    background-color: var(--primary-dark);
+    &::before {
+      border-width: 1px;
+      border-color: var(--primary-dark);
+    }
+    .btn-custom__cross {
+      color: var(--primary);
+    }
+    @include hover {
+      background-color: var(--haiti);
+      color: var(--primary-dark);
+      box-shadow: inset 0 0 20px 0 #a01cad;
+      .btn-custom__cross {
+        color: transparent;
+        stroke: var(--primary-dark);
+        transform: rotate(165deg);
+      }
+    }
+  }
+  &--pink-stroke {
+    background-color: transparent;
+    color: var(--primary-dark);
+    &::before {
+      border-color: var(--primary-dark);
+    }
+    @include hover {
+      background-color: var(--primary-dark);
+      color: white;
+    }
+  }
+  &--blue {
+    color: var(--black);
+    background-color: var(--cyan);
+    &::before {
+      border-color: var(--cyan);
+    }
+    @include hover {
+      background-color: transparent;
+      color: var(--cyan);
+      .btn-custom__cross {
+        transform: rotate(45deg);
+      }
+    }
+    .btn-custom__cross {
+      color: var(--anakiwa);
+    }
+  }
+  &._anim {
+    @include hover {
+      &.btn-custom--blue {
+        color: var(--black);
+        background-color: var(--cyan);
+      }
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      background-color: rgba(255, 255, 255, 0.5);
+      width: 20px;
+      height: 160px;
+      transform: rotate(42deg);
+      animation: tickerButton 6.5s linear infinite;
+      z-index: -1;
+    }
+  }
+  &__cross {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: -2px;
+    z-index: -1;
+    transition:
+      color 0.2s ease,
+      stroke 0.2s ease,
+      transform 0.4s ease;
+  }
+}
+
+.btn-simple {
+  height: 70px;
+  border: 1px solid white;
+  padding: 6px;
+  font-weight: 700;
+  font-size: 20px;
+  max-width: 280px;
+  width: 100%;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  @include hover {
+    border-color: var(--primary);
+    background-color: var(--primary);
+  }
+
+  &--primary {
+    border-color: var(--primary);
+    background-color: var(--primary);
+    @include hover {
+      background-color: transparent;
+      border-color: white;
+    }
+  }
+}
+@keyframes tickerButton {
+  0% {
+    left: -200px;
+  }
+  20% {
+    left: 350px;
+  }
+  100% {
+    left: 350px;
+  }
+}

@@ -1,0 +1,26 @@
+.slider-nav {
+  &__btn {
+    @include flex-center;
+    width: 54px;
+    height: 54px;
+    background-color: var(--cyan);
+    color: var(--black);
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease;
+    @include hover {
+      background-color: var(--primary);
+      color: white;
+    }
+    &--prev {
+      transform: rotate(90deg);
+    }
+    &--next {
+      transform: rotate(-90deg);
+    }
+  }
+  &__btn-arrow {
+    width: 24px;
+    height: 24px;
+  }
+}
