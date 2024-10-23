@@ -3,7 +3,7 @@ export default function servicesSort() {
   const servicesMark = document.querySelector("#services-mark");
   const servicesModel = document.querySelector("#services-model");
   const servicesYear = document.querySelector("#services-year");
-  const nav = document.querySelector(".all-services__list");
+  const nav = document.querySelector(".all-services__slider .swiper-wrapper");
   if (sortBtn) {
     sortBtn.addEventListener("click", () => {
       if (servicesMark.value) {

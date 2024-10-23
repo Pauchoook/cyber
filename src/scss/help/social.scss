@@ -9,12 +9,6 @@
     width: 40px;
     height: 40px;
     background-color: var(--black);
-    color: var(--cyan);
-    transition: color .2s ease, background-color .2s ease;
-    @include hover {
-      color: var(--primary);
-      background-color: white;
-    }
   }
   &__icon {
     display: block;

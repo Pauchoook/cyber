@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="stylesheet" href="css/style.min.css?_v=20241023113048">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241023201450">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -252,30 +252,22 @@
 					<ul class="list social">
 						<li>
 							<a href="#" target="_blank" class="social__btn">
-								<svg class="social__icon">
-									<use xlink:href="img/icons/icons.svg#icon-tg"></use>
-								</svg>
+								<img src="img/tg.svg" alt="icon" class="social__icon" />
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank" class="social__btn">
-								<svg class="social__icon">
-									<use xlink:href="img/icons/icons.svg#icon-wh"></use>
-								</svg>
+								<img src="img/wh.svg" alt="icon" class="social__icon" />
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank" class="social__btn">
-								<svg class="social__icon">
-									<use xlink:href="img/icons/icons.svg#icon-sms"></use>
-								</svg>
+								<img src="img/sms.webp" alt="icon" class="social__icon" />
 							</a>
 						</li>
 						<li>
 							<a href="#" target="_blank" class="social__btn">
-								<svg class="social__icon">
-									<use xlink:href="img/icons/icons.svg#icon-tel"></use>
-								</svg>
+								<img src="img/tel.svg" alt="icon" class="social__icon" />
 							</a>
 						</li>
 					</ul>
@@ -296,7 +288,7 @@
 						<label for="fast-appointment-tel" class="appointment__form-item">
 							<input type="tel" placeholder="Your phone" id="fast-appointment-tel" class="input" />
 						</label>
-						<button class="btn btn-custom btn-custom--pink">Call Me</button>
+						<button class="btn btn-simple">Call Me</button>
 					</form>
 				</div>
 			</section>
@@ -406,16 +398,19 @@
 						</button>
 						<div class="select__item scrollbar">
 							<ul class="list">
-								<li class="select__item-btn">Acura</li>
-								<li class="select__item-btn">Aston Martin</li>
-								<li class="select__item-btn">Audi</li>
-								<li class="select__item-btn">BMW</li>
-								<li class="select__item-btn">Bentley</li>
-								<li class="select__item-btn">Bugatti</li>
-								<li class="select__item-btn">Buick</li>
-								<li class="select__item-btn">Cadillac</li>
-								<li class="select__item-btn">Chevrolet</li>
-								<li class="select__item-btn">Dodge</li>
+								<li class="select__item-btn">2024</li>
+								<li class="select__item-btn">2023</li>
+								<li class="select__item-btn">2022</li>
+								<li class="select__item-btn">2021</li>
+								<li class="select__item-btn">2020</li>
+								<li class="select__item-btn">2019</li>
+								<li class="select__item-btn">2018</li>
+								<li class="select__item-btn">2017</li>
+								<li class="select__item-btn">2016</li>
+								<li class="select__item-btn">2015</li>
+								<li class="select__item-btn">2014</li>
+								<li class="select__item-btn">2013</li>
+								<li class="select__item-btn">2012</li>
 							</ul>
 						</div>
 					</div>
@@ -426,194 +421,206 @@
 						</svg>
 					</button>
 				</div>
-				<ul data-spollers data-one-spoller class="list all-services__list">
-					<li class="all-services__item" data-mark="123" data-model="22" data-year="36">
-						<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
-						<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
-						<div class="all-services__wrapper-icons">
-							<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
-							<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+				<div data-spollers data-one-spoller class="swiper all-services__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide all-services__item" data-mark="123" data-model="22" data-year="36">
+							<div class="all-services__item-body">
+								<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
+								<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
+								<div class="all-services__wrapper-icons">
+									<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
+									<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+								</div>
+								<h5 class="title all-services__item-title">BODY WORK</h5>
+								<div data-spoller class="all-services__item-btn">
+									<span>More</span>
+									<svg class="all-services__arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div class="all-services__item-info">
+									<ul class="list all-services__info-list">
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+									</ul>
+									<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
+										<span>Book a service</span>
+										<svg class="btn-custom__cross">
+											<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="all-services__item-rect">
+									<svg class="all-services__rect-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
+									</svg>
+								</div>
+							</div>
 						</div>
-						<h5 class="title all-services__item-title">BODY WORK</h5>
-						<div data-spoller class="all-services__item-btn">
-							<span>More</span>
-							<svg class="all-services__arrow">
-								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-							</svg>
+						<div class="swiper-slide all-services__item" data-mark="2" data-model="35" data-year="47">
+							<div class="all-services__item-body">
+								<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
+								<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
+								<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
+								<div class="all-services__wrapper-icons">
+									<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
+									<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+								</div>
+								<h5 class="title all-services__item-title">Place order</h5>
+								<div data-spoller class="all-services__item-btn">
+									<span>More</span>
+									<svg class="all-services__arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div class="all-services__item-info">
+									<ul class="list all-services__info-list">
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+									</ul>
+									<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
+										<span>Book a service</span>
+										<svg class="btn-custom__cross">
+											<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="all-services__item-rect">
+									<svg class="all-services__rect-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
+									</svg>
+								</div>
+							</div>
 						</div>
-						<div class="all-services__item-info">
-							<ul class="list all-services__info-list">
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-							</ul>
-							<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
-								<span>Book a service</span>
-								<svg class="btn-custom__cross">
-									<use xlink:href="img/icons/icons.svg#icon-cross"></use>
-								</svg>
-							</a>
+						<div class="swiper-slide all-services__item" data-mark="34" data-model="4" data-year="5">
+							<div class="all-services__item-body">
+								<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
+								<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
+								<div class="all-services__wrapper-icons">
+									<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
+									<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+								</div>
+								<h5 class="title all-services__item-title">MECHANICAL REPAIR</h5>
+								<div data-spoller class="all-services__item-btn">
+									<span>More</span>
+									<svg class="all-services__arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div class="all-services__item-info">
+									<ul class="list all-services__info-list">
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+									</ul>
+									<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
+										<span>Book a service</span>
+										<svg class="btn-custom__cross">
+											<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="all-services__item-rect">
+									<svg class="all-services__rect-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
+									</svg>
+								</div>
+							</div>
 						</div>
-						<div class="all-services__item-rect">
-							<svg class="all-services__rect-arrow">
-								<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
-							</svg>
+						<div class="swiper-slide all-services__item" data-mark="4" data-model="15" data-year="46">
+							<div class="all-services__item-body">
+								<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
+								<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
+								<div class="all-services__wrapper-icons">
+									<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
+									<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+								</div>
+								<h5 class="title all-services__item-title">DIAGNOSTIC</h5>
+								<div data-spoller class="all-services__item-btn">
+									<span>More</span>
+									<svg class="all-services__arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div class="all-services__item-info">
+									<ul class="list all-services__info-list">
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+									</ul>
+									<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
+										<span>Book a service</span>
+										<svg class="btn-custom__cross">
+											<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="all-services__item-rect">
+									<svg class="all-services__rect-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
+									</svg>
+								</div>
+							</div>
 						</div>
-					</li>
-					<li class="all-services__item" data-mark="2" data-model="35" data-year="47">
-						<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
-						<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
-						<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
-						<div class="all-services__wrapper-icons">
-							<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
-							<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+						<div class="swiper-slide all-services__item" data-mark="15" data-model="6" data-year="767">
+							<div class="all-services__item-body">
+								<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
+								<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
+								<div class="all-services__wrapper-icons">
+									<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
+									<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
+								</div>
+								<h5 class="title all-services__item-title">ELECTRICIAN</h5>
+								<div data-spoller class="all-services__item-btn">
+									<span>More</span>
+									<svg class="all-services__arrow">
+										<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+									</svg>
+								</div>
+								<div class="all-services__item-info">
+									<ul class="list all-services__info-list">
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+										<li class="all-services__info-item">body repair</li>
+									</ul>
+									<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
+										<span>Book a service</span>
+										<svg class="btn-custom__cross">
+											<use xlink:href="img/icons/icons.svg#icon-cross"></use>
+										</svg>
+									</a>
+								</div>
+								<div class="all-services__item-rect">
+									<svg class="all-services__rect-arrow">
+										<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
+									</svg>
+								</div>
+							</div>
 						</div>
-						<h5 class="title all-services__item-title">Place order</h5>
-						<div data-spoller class="all-services__item-btn">
-							<span>More</span>
-							<svg class="all-services__arrow">
-								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-							</svg>
-						</div>
-						<div class="all-services__item-info">
-							<ul class="list all-services__info-list">
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-							</ul>
-							<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
-								<span>Book a service</span>
-								<svg class="btn-custom__cross">
-									<use xlink:href="img/icons/icons.svg#icon-cross"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="all-services__item-rect">
-							<svg class="all-services__rect-arrow">
-								<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
-							</svg>
-						</div>
-					</li>
-					<li class="all-services__item" data-mark="34" data-model="4" data-year="5">
-						<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
-						<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
-						<div class="all-services__wrapper-icons">
-							<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
-							<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
-						</div>
-						<h5 class="title all-services__item-title">MECHANICAL REPAIR</h5>
-						<div data-spoller class="all-services__item-btn">
-							<span>More</span>
-							<svg class="all-services__arrow">
-								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-							</svg>
-						</div>
-						<div class="all-services__item-info">
-							<ul class="list all-services__info-list">
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-							</ul>
-							<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
-								<span>Book a service</span>
-								<svg class="btn-custom__cross">
-									<use xlink:href="img/icons/icons.svg#icon-cross"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="all-services__item-rect">
-							<svg class="all-services__rect-arrow">
-								<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
-							</svg>
-						</div>
-					</li>
-					<li class="all-services__item" data-mark="4" data-model="15" data-year="46">
-						<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
-						<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
-						<div class="all-services__wrapper-icons">
-							<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
-							<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
-						</div>
-						<h5 class="title all-services__item-title">DIAGNOSTIC</h5>
-						<div data-spoller class="all-services__item-btn">
-							<span>More</span>
-							<svg class="all-services__arrow">
-								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-							</svg>
-						</div>
-						<div class="all-services__item-info">
-							<ul class="list all-services__info-list">
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-							</ul>
-							<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
-								<span>Book a service</span>
-								<svg class="btn-custom__cross">
-									<use xlink:href="img/icons/icons.svg#icon-cross"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="all-services__item-rect">
-							<svg class="all-services__rect-arrow">
-								<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
-							</svg>
-						</div>
-					</li>
-					<li class="all-services__item" data-mark="15" data-model="6" data-year="767">
-						<img src="img/cross-gray.webp" alt="icon" class="all-services__item-cross" />
-						<img src="img/cross-primary.webp" alt="icon" class="all-services__item-cross all-services__item-cross--primary" />
-						<div class="all-services__wrapper-icons">
-							<img src="img/service-show.webp" alt="icon" class="all-services__icon" />
-							<img src="img/service-show-dark.webp" alt="icon" class="all-services__icon all-services__icon--show" />
-						</div>
-						<h5 class="title all-services__item-title">ELECTRICIAN</h5>
-						<div data-spoller class="all-services__item-btn">
-							<span>More</span>
-							<svg class="all-services__arrow">
-								<use xlink:href="img/icons/icons.svg#icon-arrow"></use>
-							</svg>
-						</div>
-						<div class="all-services__item-info">
-							<ul class="list all-services__info-list">
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-								<li class="all-services__info-item">body repair</li>
-							</ul>
-							<a href="#" class="btn btn-custom btn-custom--pink all-services__info-btn">
-								<span>Book a service</span>
-								<svg class="btn-custom__cross">
-									<use xlink:href="img/icons/icons.svg#icon-cross"></use>
-								</svg>
-							</a>
-						</div>
-						<div class="all-services__item-rect">
-							<svg class="all-services__rect-arrow">
-								<use xlink:href="img/icons/icons.svg#icon-curve-arrow"></use>
-							</svg>
-						</div>
-					</li>
-				</ul>
+					</div>
+				</div>
 			</div>
 		</section>
 
@@ -622,32 +629,32 @@
 				<h2 class="title title-2 projects__title">Project photos</h2>
 				<div class="swiper projects__slider">
 					<div class="swiper-wrapper">
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-6.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-6.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-2.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-2.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-3.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-3.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-4.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-4.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-5.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-5.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-6.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-6.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-7.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-7.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-2.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-2.webp" alt="image" class="projects__img" />
 						</a>
-						<a href="img/all-services.webp" data-fancybox="projects" class="swiper-slide projects__slide">
-							<img src="img/all-services.webp" alt="image" class="projects__img" />
+						<a href="img/project-4.webp" data-fancybox="projects" class="swiper-slide projects__slide">
+							<img src="img/project-4.webp" alt="image" class="projects__img" />
 						</a>
 					</div>
 				</div>
@@ -739,18 +746,13 @@
 								<h5 class="title app__btn-title">App Store</h5>
 							</div>
 						</a>
-						<a href="#" target="_blank" class="btn-simple">
+						<a href="#" target="_blank" class="btn-simple btn-simple--stroke">
 							<img src="img/playmarket.svg" alt="icon" class="app__btn-icon" />
 							<div>
 								<span class="app__btn-content">Get it on</span>
 								<h5 class="title app__btn-title">Google Play</h5>
 							</div>
 						</a>
-					</div>
-					<div class="app__auth">
-						<img src="img/logo.svg" alt="logo" class="app__logo" />
-						<a href="#" class="btn-custom btn-custom--pink app__auth-btn"> Login </a>
-						<a href="#" class="btn-custom btn-custom--pink-stroke app__auth-btn"> Register </a>
 					</div>
 				</div>
 			</div>
@@ -809,8 +811,8 @@
 		</div>
 	</footer>
 
-	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20241023113048" type="text/javascript"></script>
-	<script src="js/app.min.js?_v=20241023113048"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=b46e9249-4925-4460-b11c-3aaf76ad0115&lang=ru_RU&_v=20241023201450" type="text/javascript"></script>
+	<script src="js/app.min.js?_v=20241023201450"></script>
 </body>
 
 </html>

@@ -4128,13 +4128,22 @@
                 }
             });
         }
+        const servicesSlider = document.querySelector(".all-services__slider");
+        if (servicesSlider && window.matchMedia("(min-width: 577px)").matches) {
+            new Swiper(servicesSlider, {
+                speed: 1e3,
+                grabCursor: true,
+                slidesPerView: "auto",
+                spaceBetween: 20
+            });
+        }
     }
     function servicesSort() {
         const sortBtn = document.querySelector(".all-services__btn");
         const servicesMark = document.querySelector("#services-mark");
         const servicesModel = document.querySelector("#services-model");
         const servicesYear = document.querySelector("#services-year");
-        const nav = document.querySelector(".all-services__list");
+        const nav = document.querySelector(".all-services__slider .swiper-wrapper");
         if (sortBtn) {
             sortBtn.addEventListener("click", (() => {
                 if (servicesMark.value) mySort("data-mark");
@@ -8886,7 +8895,6 @@
     }
     function animationHero() {
         const imageShow = document.querySelector(".hero__bg--show");
-        const hero = document.querySelector(".hero");
         if (imageShow) {
             animation();
             function animation() {
@@ -8894,13 +8902,9 @@
                     imageShow.classList.remove("opacity");
                     imageShow.classList.add("opacity-none");
                     setTimeout((() => {
-                        hero.classList.add("active");
-                        setTimeout((() => {
-                            imageShow.classList.remove("opacity-none");
-                            imageShow.classList.add("opacity");
-                            hero.classList.remove("active");
-                            setTimeout((() => animation()), 4e3);
-                        }), 3e3);
+                        imageShow.classList.remove("opacity-none");
+                        imageShow.classList.add("opacity");
+                        setTimeout((() => animation()), 4e3);
                     }), 3e3);
                 }), 4e3);
             }

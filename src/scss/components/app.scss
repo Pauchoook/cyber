@@ -44,7 +44,7 @@
   &__subtitle {
     color: var(--primary);
     font-size: 20px;
-    margin-bottom: 10px;
+    margin: 0px 0px 10px 0px;
   }
   &__title {
     margin-bottom: 16px;
@@ -82,38 +82,5 @@
   }
   &__btn-title {
     font-size: 24px;
-  }
-  &__auth {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    left: 220px;
-    bottom: 155px;
-    @include desktop {
-      left: 170px;
-    }
-    @include laptop-middle {
-      left: 110px;
-      bottom: 70px;
-    }
-    @include laptop-min {
-      display: none;
-    }
-  }
-  &__logo {
-    width: 265px;
-    margin-bottom: 65px;
-    @include laptop-middle {
-      width: 200px;
-    }
-  }
-  &__auth-btn {
-    max-width: 200px;
-    width: 100%;
-    height: 50px;
-    &:not(:last-child) {
-      margin-bottom: 15px;
-    }
   }
 }

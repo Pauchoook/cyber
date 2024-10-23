@@ -323,19 +323,21 @@ body {
   transition: color .2s ease,stroke .2s ease,transform .4s ease,-webkit-transform .4s ease
 }
 .btn-simple {
-  height: 70px;
-  border: 1px solid #fff;
-  padding: 6px;
-  font-weight: 700;
-  font-size: 20px;
+  position: relative;
+  overflow: hidden;
   max-width: 280px;
+  height: 70px;
   width: 100%;
+  padding: 5px;
+  background-color: var(--primary);
+  font-weight: 700;
+  font-size: 16px;
   text-transform: uppercase;
-  transition: background-color .2s ease,border-color .2s ease
+  text-align: center
 }
-.btn-simple--primary {
-  border-color: var(--primary);
-  background-color: var(--primary)
+.btn-simple--stroke {
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #fff
 }
 @-webkit-keyframes tickerButton {
   0% {
@@ -476,9 +478,7 @@ body {
   display: block;
   width: 40px;
   height: 40px;
-  background-color: var(--black);
-  color: var(--cyan);
-  transition: color .2s ease,background-color .2s ease
+  background-color: var(--black)
 }
 .social__icon {
   display: block;
@@ -791,24 +791,13 @@ body {
   margin-top: 134px;
   z-index: 1
 }
-.hero::after,
 .hero::before {
   position: absolute;
   content: "";
   inset: 0;
-  background-color: #000
-}
-.hero::before {
+  background-color: #000;
   opacity: .6;
-  z-index: -3
-}
-.hero::after {
-  opacity: 0;
-  z-index: -1;
-  transition: opacity 3s ease
-}
-.hero.active::after {
-  opacity: .6
+  z-index: -1
 }
 .hero__bg {
   position: absolute;
@@ -818,7 +807,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-  z-index: -4
+  z-index: -3
 }
 .hero__bg--show {
   z-index: -2;
@@ -826,10 +815,10 @@ body {
   transition: opacity .2s ease
 }
 .hero__bg--show.opacity-none {
-  opacity: 1;
-  z-index: -2
+  opacity: 1
 }
 .hero__bg--show.opacity {
+  transition: opacity 1s ease;
   opacity: 0
 }
 .hero__btn-chat {
@@ -989,6 +978,7 @@ body {
 }
 .all-services {
   position: relative;
+  overflow: hidden;
   margin-top: 100px;
   padding: 40px 0 90px 0;
   z-index: 1
@@ -1024,31 +1014,21 @@ body {
 .all-services__select {
   flex: 1
 }
-.all-services__list {
+.all-services__slider {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
   margin-top: 60px;
-  gap: 20px
+  overflow: visible!important;
+  margin: 60px -20px 0 -20px;
+  padding: 0 20px
 }
 .all-services__item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
-  flex-direction: column;
-  overflow: hidden;
-  cursor: pointer;
-  padding: 100px 30px 30px 30px;
-  width: 338px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  background-color: var(--ebony);
-  border: 1px solid var(--shaft);
-  transition: box-shadow .2s ease,padding .2s ease,max-height .2s ease;
-  z-index: 1
+  box-sizing: border-box;
+  width: 338px!important;
+  height: 540px!important
 }
 .all-services__item.open {
   padding-top: 70px;
@@ -1058,18 +1038,21 @@ body {
 }
 .all-services__item.open .all-services__item-title {
   padding: 35px 0 10px 0;
-  flex-basis: auto
+  height: 80px
 }
 .all-services__item.open .all-services__arrow {
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg)
 }
 .all-services__item.open .all-services__item-cross {
-  opacity: 0
+  opacity: 0!important
 }
 .all-services__item.open .all-services__item-cross--primary {
   -webkit-transform: scale(1) translateY(0);
   transform: scale(1) translateY(0);
+  opacity: 1!important
+}
+.all-services__item.open .all-services__wrapper-icons::before {
   opacity: 1
 }
 .all-services__item.open .all-services__icon {
@@ -1078,21 +1061,26 @@ body {
 .all-services__item.open .all-services__icon--show {
   opacity: 1
 }
-.all-services__item.open::before {
-  opacity: 1
-}
-.all-services__item::before {
+.all-services__item-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  content: "";
-  width: 150px;
-  height: 95px;
-  background-color: rgba(225,66,241,.5);
-  -webkit-filter: blur(45px);
-  filter: blur(45px);
-  top: 85px;
-  opacity: 0;
-  transition: opacity .2s ease;
-  z-index: -1
+  top: 0;
+  left: 0;
+  right: 0;
+  box-sizing: border-box;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 100px 30px 30px 30px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: var(--ebony);
+  border: 1px solid var(--shaft);
+  transition: box-shadow .2s ease,padding .2s ease,max-height .2s ease;
+  z-index: 1
 }
 .all-services__item-cross {
   position: absolute;
@@ -1116,7 +1104,21 @@ body {
 .all-services__wrapper-icons {
   position: relative;
   display: flex;
-  justify-content: center
+  justify-content: center;
+  z-index: 1
+}
+.all-services__wrapper-icons::before {
+  position: absolute;
+  content: "";
+  width: 150px;
+  height: 95px;
+  background-color: rgba(225,66,241,.5);
+  -webkit-filter: blur(45px);
+  filter: blur(45px);
+  top: 0;
+  opacity: 0;
+  transition: opacity .2s ease;
+  z-index: -1
 }
 .all-services__icon {
   width: 190px;
@@ -1136,8 +1138,8 @@ body {
   font-size: 30px;
   text-transform: uppercase;
   text-align: center;
-  flex: 0 1 175px;
-  transition: padding .2s ease,flex-basis 1s ease
+  height: 175px;
+  transition: padding .2s ease,height .3s ease
 }
 .all-services__item-btn {
   display: flex;
@@ -1274,7 +1276,8 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  padding: 88px 0
+  padding: 88px 0;
+  min-height: 295px
 }
 .banner__wrapper {
   position: absolute;
@@ -1320,7 +1323,7 @@ body {
 .app__subtitle {
   color: var(--primary);
   font-size: 20px;
-  margin-bottom: 10px
+  margin: 0 0 10px 0
 }
 .app__title {
   margin-bottom: 16px;
@@ -1347,26 +1350,6 @@ body {
 }
 .app__btn-title {
   font-size: 24px
-}
-.app__auth {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 220px;
-  bottom: 155px
-}
-.app__logo {
-  width: 265px;
-  margin-bottom: 65px
-}
-.app__auth-btn {
-  max-width: 200px;
-  width: 100%;
-  height: 50px
-}
-.app__auth-btn:not(:last-child) {
-  margin-bottom: 15px
 }
 .contacts {
   position: relative;
@@ -3207,9 +3190,6 @@ html.with-fancybox body.hide-scrollbar {
   .app__frame {
     left: 80px
   }
-  .app__auth {
-    left: 170px
-  }
 }
 @media (max-width:1365px) {
   .title-1 {
@@ -3256,13 +3236,6 @@ html.with-fancybox body.hide-scrollbar {
   .app__frame {
     width: 500px;
     left: 30px
-  }
-  .app__auth {
-    left: 110px;
-    bottom: 70px
-  }
-  .app__logo {
-    width: 200px
   }
   .contacts__container {
     align-items: center;
@@ -3410,9 +3383,6 @@ html.with-fancybox body.hide-scrollbar {
   .app__body {
     margin: 0
   }
-  .app__auth {
-    display: none
-  }
   .contacts__title {
     font-size: 36px
   }
@@ -3509,10 +3479,8 @@ html.with-fancybox body.hide-scrollbar {
   .all-services__select {
     flex-basis: 100%
   }
-  .all-services__item {
-    width: calc(50% - 10px);
-    padding: 30px;
-    min-height: auto
+  .all-services__item-body {
+    padding: 30px
   }
   .all-services__item-title {
     margin: 30px 0
@@ -3563,11 +3531,21 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 @media (max-width:576px) {
+  .all-services__slider {
+    margin-top: 55px
+  }
+  .all-services__slider .swiper-wrapper {
+    flex-wrap: wrap;
+    gap: 20px
+  }
   .all-services__item {
-    width: 100%;
+    width: 100%!important;
+    height: auto!important
+  }
+  .all-services__item-body {
+    position: static;
     border: none;
     flex-direction: row;
-    gap: 30px;
     padding: 16px 23px;
     backdrop-filter: blur(20px);
     background: rgba(3,6,7,.5);
@@ -3580,8 +3558,8 @@ html.with-fancybox body.hide-scrollbar {
     margin: 0;
     text-align: start;
     flex: none;
-    max-width: 195px;
-    padding: 0
+    padding: 0;
+    height: auto
   }
   .all-services__item-btn {
     display: none
@@ -3619,6 +3597,9 @@ html.with-fancybox body.hide-scrollbar {
   }
   .cybershop__car {
     width: 200px
+  }
+  .all-services__item-title {
+    max-width: 195px
   }
   .footer__list {
     gap: 0;
@@ -3663,20 +3644,8 @@ html.with-fancybox body.hide-scrollbar {
     color: var(--black);
     background-color: var(--cyan)
   }
-  .btn-simple:hover {
-    border-color: var(--primary);
-    background-color: var(--primary)
-  }
-  .btn-simple--primary:hover {
-    background-color: rgba(0,0,0,0);
-    border-color: #fff
-  }
   .select__item-btn:hover {
     background-color: var(--primary-dark)
-  }
-  .social__btn:hover {
-    color: var(--primary);
-    background-color: #fff
   }
   .modal__close:hover {
     color: var(--primary)
@@ -3699,10 +3668,10 @@ html.with-fancybox body.hide-scrollbar {
     color: var(--primary-dark);
     background-color: rgba(0,0,0,0)
   }
-  .all-services__item:hover {
+  .all-services__item-body:hover {
     box-shadow: 0 0 30px 0 rgba(218,73,189,.5)
   }
-  .all-services__item:hover .all-services__item-cross {
+  .all-services__item-body:hover .all-services__item-cross {
     opacity: 1
   }
   .projects__slide:hover::before {

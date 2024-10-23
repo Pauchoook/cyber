@@ -1,5 +1,6 @@
 .all-services {
   position: relative;
+  overflow: hidden;
   margin-top: 100px;
   padding: 40px 0px 90px 0px;
   z-index: 1;
@@ -56,22 +57,75 @@
       margin-top: 20px;
     }
   }
-  &__list {
+  &__slider {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
     justify-content: center;
     margin-top: 60px;
-    gap: 20px;
+    overflow: visible !important;
+    margin: 60px -20px 0px -20px;
+    padding: 0px 20px;
+    @include tablet-min {
+      margin-top: 55px;
+      .swiper-wrapper {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+    }
   }
   &__item {
-    @include flex-center;
     position: relative;
+    box-sizing: border-box;
+    width: 338px !important;
+    height: 540px !important;
+    &.open {
+      padding-top: 70px;
+      max-height: none;
+      box-shadow: 0 0 30px 0 #da49bd;
+      border-color: var(--primary);
+      .all-services__item-title {
+        padding: 35px 0px 10px 0px;
+        height: 80px;
+      }
+      .all-services__arrow {
+        transform: rotate(180deg);
+      }
+      .all-services__item-cross {
+        opacity: 0 !important;
+        &--primary {
+          transform: scale(1) translateY(0px);
+          opacity: 1 !important;
+        }
+      }
+      .all-services__wrapper-icons {
+        &::before {
+          opacity: 1;
+        }
+      }
+      .all-services__icon {
+        opacity: 0;
+        &--show {
+          opacity: 1;
+        }
+      }
+    }
+    @include tablet-min {
+      width: 100% !important;
+      height: auto !important;
+    }
+  }
+  &__item-body {
+    @include flex-center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
     flex-direction: column;
     overflow: hidden;
     cursor: pointer;
     padding: 100px 30px 30px 30px;
-    width: 338px;
     height: fit-content;
     background-color: var(--ebony);
     border: 1px solid var(--shaft);
@@ -86,63 +140,17 @@
         opacity: 1;
       }
     }
-    &.open {
-      padding-top: 70px;
-      max-height: none;
-      box-shadow: 0 0 30px 0 #da49bd;
-      border-color: var(--primary);
-      .all-services__item-title {
-        padding: 35px 0px 10px 0px;
-        flex-basis: auto;
-      }
-      .all-services__arrow {
-        transform: rotate(180deg);
-      }
-      .all-services__item-cross {
-        opacity: 0;
-        &--primary {
-          transform: scale(1) translateY(0px);
-          opacity: 1;
-        }
-      }
-      .all-services__icon {
-        opacity: 0;
-        &--show {
-          opacity: 1;
-        }
-      }
-
-      &::before {
-        opacity: 1;
-      }
-    }
     @include tablet {
-      width: calc(50% - 10px);
       padding: 30px;
-      min-height: auto;
     }
     @include tablet-min {
-      width: 100%;
+      position: static;
       border: none;
       flex-direction: row;
-      gap: 30px;
       padding: 16px 23px;
       backdrop-filter: blur(20px);
       background: rgba(3, 6, 7, 0.5);
       gap: 0;
-    }
-
-    &::before {
-      position: absolute;
-      content: "";
-      width: 150px;
-      height: 95px;
-      background-color: rgba(225, 66, 241, 0.5);
-      filter: blur(45px);
-      top: 85px;
-      opacity: 0;
-      transition: opacity .2s ease;
-      z-index: -1;
     }
   }
   &__item-cross {
@@ -167,10 +175,23 @@
     position: relative;
     display: flex;
     justify-content: center;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 150px;
+      height: 95px;
+      background-color: rgba(225, 66, 241, 0.5);
+      filter: blur(45px);
+      top: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      z-index: -1;
+    }
   }
   &__icon {
     width: 190px;
-    transition: opacity .2s ease;
+    transition: opacity 0.2s ease;
     &--show {
       position: absolute;
       top: 0;
@@ -189,10 +210,10 @@
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
-    flex: 0 1 175px;
+    height: 175px;
     transition:
       padding 0.2s ease,
-      flex-basis 1s ease;
+      height 0.3s ease;
     @include tablet {
       margin: 30px 0px;
     }
@@ -200,8 +221,11 @@
       margin: 0;
       text-align: start;
       flex: none;
-      max-width: 195px;
       padding: 0;
+      height: auto;
+    }
+    @include mobile {
+      max-width: 195px;
     }
   }
   &__item-btn {

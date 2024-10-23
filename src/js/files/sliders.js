@@ -25,4 +25,14 @@ export default function sliders() {
       },
     });
   }
+
+  const servicesSlider = document.querySelector(".all-services__slider");
+  if (servicesSlider && window.matchMedia("(min-width: 577px)").matches) {
+    const swiper = new Swiper(servicesSlider, {
+      speed: 1000,
+      grabCursor: true,
+      slidesPerView: "auto",
+      spaceBetween: 20
+    });
+  }
 }

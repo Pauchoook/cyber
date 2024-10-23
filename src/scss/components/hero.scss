@@ -20,25 +20,13 @@
     min-height: calc(100vh - 64px);
     margin-top: 64px;
   }
-  &::after, &::before {
+  &::before {
     position: absolute;
     content: "";
     inset: 0;
     background-color: black;
-  }
-  &::before {
     opacity: 0.6;
-    z-index: -3;
-  }
-  &::after {
-    opacity: 0;
     z-index: -1;
-    transition: opacity 3s ease;
-  }
-  &.active {
-    &::after {
-      opacity: 0.6;
-    }
   }
   &__bg {
     position: absolute;
@@ -47,17 +35,16 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -4;
+    z-index: -3;
     &--show {
       z-index: -2;
       opacity: 0;
       transition: opacity .2s ease;
       &.opacity-none {
         opacity: 1;
-        z-index: -2;
       }
       &.opacity {
-        // animation: show 3s linear;
+        transition: opacity 1s ease;
         opacity: 0;
       }
     }
