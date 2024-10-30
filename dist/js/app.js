@@ -8892,6 +8892,7 @@
     });
     function fancy() {
         Oe.bind('[data-fancybox="projects"]', {});
+        Oe.bind('[data-fancybox="about-video"]', {});
     }
     function animationHero() {
         const imageShow = document.querySelector(".hero__bg--show");

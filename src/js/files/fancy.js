@@ -3,4 +3,5 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 export default function fancy() {
   Fancybox.bind('[data-fancybox="projects"]', {});
+  Fancybox.bind('[data-fancybox="about-video"]', {});
 }

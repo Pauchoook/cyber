@@ -10,6 +10,14 @@
     opacity: 0.5;
     z-index: -1;
   }
+
+  .wpcf7 {
+    flex: 1;
+  }
+  .wpcf7-response-output {
+    margin: 0 !important;
+  }
+
   &__container {
     @include flex-between;
     flex-wrap: wrap;

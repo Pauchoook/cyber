@@ -1,0 +1,108 @@
+.about-video {
+  position: relative;
+  padding: 65px 0px;
+  z-index: 1;
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+  }
+  &::before {
+    background-color: black;
+    opacity: 0.75;
+    z-index: -2;
+  }
+  &::after {
+    background: url('@img/about-video-decor.png') right -70px top -55px / 100% auto no-repeat;
+    z-index: -1;
+    @include tablet {
+      background-position: bottom 0 right 0;
+    }
+  }
+  &__container {
+    max-width: 1330px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 70px;
+  }
+  &__body {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @include laptop {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+    }
+  }
+  &__video {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    max-width: 880px;
+    width: 100%;
+    height: 500px;
+    @include laptop {
+      height: auto;
+    }
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: black;
+      opacity: 0.6;
+    }
+  }
+  &__preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+  }
+  &__play {
+    @include flex-center;
+    position: absolute;
+    top: calc(50% - 25px);
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: var(--red);
+    transition: transform 0.2s ease;
+    @include hover {
+      transform: scale(1.1);
+    }
+  }
+  &__play-icon {
+    width: 15px;
+    height: 15px;
+  }
+  &__subtitle {
+    font-size: 32px;
+    max-width: 330px;
+    color: var(--primary-dark);
+    margin-bottom: 40px;
+    @include laptop {
+      max-width: none;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+  &__content {
+    margin: 0;
+    font-size: 20px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__btn {
+    @include flex-center;
+    width: 280px;
+    height: 70px;
+    margin: 75px auto 0px auto;
+  }
+}

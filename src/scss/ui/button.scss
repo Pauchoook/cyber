@@ -7,6 +7,7 @@
   color: inherit;
 }
 .btn-custom {
+  font-family: "ChakraPetch", sans-serif;
   @include flex-center;
   position: relative;
   overflow: hidden;
@@ -113,13 +114,14 @@
 }
 
 .btn-simple {
+  font-family: "ChakraPetch", sans-serif;
   position: relative;
   overflow: hidden;
   max-width: 280px;
   height: 70px;
   width: 100%;
   padding: 5px;
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
 
   font-weight: 700;
   font-size: 16px;

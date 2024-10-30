@@ -1,0 +1,12 @@
+.content-show {
+  position: absolute;
+  max-width: 1865px;
+  font-size: 64px;
+  color: rgba(160, 28, 173, 0.05);
+  top: 50px;
+  right: -700px;
+  z-index: -1;
+  @include tablet {
+    display: none;
+  }
+}

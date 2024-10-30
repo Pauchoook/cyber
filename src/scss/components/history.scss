@@ -1,0 +1,117 @@
+.history {
+  position: relative;
+  padding: 60px 0px;
+  z-index: 1;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-color: black;
+    opacity: 0.75;
+    z-index: -1;
+  }
+  @include tablet {
+    padding: 40px 0px;
+  }
+  &__decor {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 855px;
+    z-index: -1;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 60px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    @include laptop-min {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &__item {
+    grid-column: 4 span;
+    &:first-child {
+      .history__gallery {
+        &::after {
+          background: url("@img/frame-1.png") bottom 0 right 0 / cover no-repeat;
+        }
+      }
+    }
+    &:nth-child(2) {
+      .history__gallery {
+        &::after {
+          background: url("@img/frame-2.png") top 0 right 0 / cover no-repeat;
+        }
+      }
+    }
+    &:last-child {
+      .history__gallery {
+        &::after {
+          background: url("@img/frame-3.png") bottom 0 right 0 / cover no-repeat;
+        }
+      }
+    }
+    @include laptop-min {
+      flex: 0 1 calc(50% - 10px);
+    }
+    @include tablet-min {
+      flex-basis: 380px;
+    }
+  }
+  &__gallery {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    @include tablet {
+      height: 175px;
+    }
+    @include tablet-min {
+      height: 260px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      inset: 0;
+    }
+    &::before {
+      background-color: black;
+      opacity: 0.65;
+    }
+  }
+  &__item-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__item-title {
+    font-size: 20px;
+    margin-top: 30px;
+    color: var(--primary-dark);
+  }
+  &__item-btn {
+    width: fit-content;
+    display: block;
+    font-size: 20px;
+    margin: 13px 0px 0px auto;
+    transition: color 0.2s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+  &__btn {
+    margin: 60px auto 0px auto;
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+}
