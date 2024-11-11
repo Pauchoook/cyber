@@ -1,0 +1,235 @@
+.services {
+  padding: 155px 0px 0px 0px;
+  @include tablet {
+    padding: 85px 0px 0px 0px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__nav {
+    @include flex-between;
+    gap: 35px;
+    margin-bottom: 150px;
+    @include laptop {
+      margin-bottom: 100px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 70px;
+    }
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+  &__nav-changes {
+    flex: 0 1 780px;
+    display: flex;
+    gap: 40px;
+    @include tablet {
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+  &__nav-item {
+    flex: 0 1 calc(50% - 20px);
+    @include tablet {
+      flex-basis: 100%;
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-bottom: 40px;
+    @include tablet {
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  &__btn {
+    border-color: var(--dove);
+    color: var(--dove);
+    border: 1px solid var(--dove);
+    background-color: transparent;
+    &.active {
+      color: white;
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+    @include hover {
+      color: white;
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 10px;
+    }
+  }
+  &__item {
+    position: relative;
+    padding: 0px 25px 0px 100px;
+    background-color: var(--cod-gray);
+    border-bottom: 1px solid var(--dove);
+    @include tablet {
+      padding: 0px 20px;
+    }
+
+    .input-check:checked + label {
+      .label-check {
+        &::before {
+          display: block;
+        }
+      }
+    }
+  }
+  &__spoller-btn {
+    display: flex;
+    align-items: center;
+    padding: 14px 0px;
+    text-align: start;
+    gap: 60px;
+    width: 100%;
+    min-height: 70px;
+    &._spoller-active {
+      .services__spoller-arrow {
+        transform: rotate(0deg);
+      }
+    }
+    @include laptop-min {
+      gap: 40px;
+    }
+    @include tablet {
+      gap: 12px;
+    }
+
+    &--check {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      span {
+        flex: 0 1 320px;
+      }
+    }
+    &--mini {
+      min-height: 30px;
+    }
+    &--clean {
+      padding: 0;
+      min-height: auto;
+    }
+  }
+  &__spoller-btn-info {
+    flex: 1;
+  }
+  &__spoller-title {
+    color: var(--primary-dark);
+    font-size: 16px;
+  }
+  &__spoller-content {
+    display: block;
+    font-size: 12px;
+    color: var(--gray);
+    max-width: 360px;
+  }
+  &__spoller-arrow {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: var(--lunar);
+    transform: rotate(180deg);
+    transition: transform 0.2s ease;
+  }
+  &__spoller-item-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 35px 0px 40px 0px;
+    gap: 20px;
+
+    &._col {
+      flex-direction: column;
+    }
+    @include tablet {
+      padding: 5px 0px 24px 0px;
+    }
+  }
+  &__spoller-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    font-size: 16px;
+    padding-right: 30px;
+    flex: 0 1 360px;
+    @include tablet {
+      font-size: 14px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+    }
+    &::after {
+      right: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--gray);
+    }
+    &::before {
+      width: 14px;
+      height: 14px;
+      background-color: var(--gray);
+      right: 3px;
+      display: none;
+    }
+  }
+  &__date-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    opacity: 0.4;
+    pointer-events: none;
+    &._active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  &__select-date {
+    max-width: 145px;
+    width: 100%;
+  }
+  &__select-day {
+    max-width: 90px;
+    width: 100%;
+  }
+  &__date-input {
+    position: relative;
+    max-width: 135px;
+    width: 100%;
+  }
+  &__info-item {
+    max-width: 330px;
+    .input, .label-file {
+      background-color: var(--log-cabin);
+    }
+    .services__spoller-content {
+      margin-bottom: 10px;
+    }
+  }
+  &__btn-order {
+    margin: 0 auto;
+    @include tablet {
+      margin-top: 30px;
+    }
+  }
+}

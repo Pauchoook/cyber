@@ -191,6 +191,8 @@
   }
   &__icon {
     width: 190px;
+    height: 125px;
+    object-fit: contain;
     transition: opacity 0.2s ease;
     &--show {
       position: absolute;

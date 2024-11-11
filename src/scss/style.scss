@@ -13,6 +13,7 @@
 @import "./ui/title";
 @import "./ui/input";
 @import "./ui/select";
+@import "./ui/tab";
 
 // help
 @import "./help/social";
@@ -23,6 +24,8 @@
 @import "./help/section-overflow";
 @import "./help/slider-nav";
 @import "./help/content-show";
+@import "./help/pagination";
+@import "./help/breadcrumbs";
 
 // components
 @import "./components/header";
@@ -37,5 +40,6 @@
 @import "./components/contacts";
 @import "./components/about-video";
 @import "./components/history";
+@import "./components/services";
 
 @import "./components/footer";

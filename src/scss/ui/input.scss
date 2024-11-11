@@ -17,7 +17,8 @@
     color: var(--gray);
   }
 
-  &[type="date"] {
+  &[type="date"],
+  &[type="time"] {
     &::-webkit-calendar-picker-indicator {
       cursor: pointer;
       position: absolute;
@@ -26,5 +27,54 @@
       opacity: 0;
       z-index: 1;
     }
+  }
+}
+
+.input-check {
+  display: none;
+  &:checked + label {
+    &::before {
+      display: block;
+    }
+  }
+}
+.label-check {
+  @include flex-center;
+  position: relative;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--gray);
+  flex-shrink: 0;
+  &::before {
+    position: absolute;
+    content: "";
+    inset: 3px;
+    background-color: var(--gray);
+    display: none;
+  }
+}
+
+.input-file {
+  display: none;
+}
+.label-file {
+  @include flex-between;
+  cursor: pointer;
+  border: 1px solid var(--gray);
+  border-right: none;
+  border-left: none;
+  background-color: var(--cod-gray);
+  padding: 20px;
+  height: 70px;
+  color: white;
+  font-size: 16px;
+  width: 100%;
+
+  &__arrow {
+    width: 24px;
+    height: 24px;
+    transform: rotate(-90deg);
+    color: var(--lunar);
   }
 }

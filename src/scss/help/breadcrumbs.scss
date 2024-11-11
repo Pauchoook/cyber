@@ -1,0 +1,18 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 3px;
+  @include tablet {
+    display: none;
+  }
+  li {
+    font-size: 16px;
+    transition: color 0.2s ease;
+    &:not(:last-child) {
+      @include hover {
+        color: var(--primary);
+      }
+    }
+  }
+}

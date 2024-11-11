@@ -1,0 +1,478 @@
+<section class="services">
+  <div data-spollers data-one-spoller class="container services__container parent-tab">
+    <ul class="list breadcrumbs">
+      <li>
+        <a href="/">Home /</a>
+      </li>
+      <li>services a service</li>
+    </ul>
+    <h1 class="title title-2 services__title">services a service</h1>
+    <div class="services__nav">
+      <div class="services__nav-changes">
+        <div class="services__nav-item">
+          <div class="select">
+            <button class="btn select__btn">
+              <input type="text" id="services-vehicle" class="input-show" />
+              <span>Select your Vehicle</span>
+              <svg class="select__arrow">
+                <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+              </svg>
+            </button>
+            <div class="select__item scrollbar">
+              <ul class="list">
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+                <li class="select__item-btn">Lada Granta</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="services__nav-item">
+          <input type="text" placeholder="Mileagle" id="mileagle" class="input" />
+        </div>
+      </div>
+      <div data-da=".services__container, 743, 10" class="pagination">
+        <span class="pagination__number">0/5</span>
+        <div class="pagination__buttons">
+          <a href="#" class="pagination__btn _disabled">
+            <svg class="pagination__arrow">
+              <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </a>
+          <a href="#" class="pagination__btn">
+            <svg class="pagination__arrow">
+              <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="services__buttons">
+      <a href="#" class="btn btn-simple btn-simple__stroke services__btn active">
+        Select Repair / Service
+      </a>
+      <a href="#" class="btn btn-simple btn-simple__stroke services__btn"> Select Diagnostics </a>
+      <a href="#" class="btn btn-simple btn-simple__stroke services__btn"> Optional services </a>
+    </div>
+    <div class="services__body">
+      <div class="services__item diagnostic">
+        <button data-spoller class="btn services__spoller-btn">
+          <div class="services__spoller-btn-info">
+            <h5 class="title diagnostic-title services__spoller-title">Vehicle will not start</h5>
+            <span class="services__spoller-content selected">Selected 0 of 9</span>
+          </div>
+          <svg class="services__spoller-arrow">
+            <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+          </svg>
+          <input
+            type="checkbox"
+            id="Vehicle will not start"
+            name="Vehicle will not start"
+            class="input-check main-input-check"
+          />
+          <label for="Vehicle will not start" class="label-check"></label>
+        </button>
+        <div class="services__spoller-item">
+          <div class="services__spoller-item-wrapper">
+            <input type="checkbox" id="No Crank / No Start" class="input-check" />
+            <label for="No Crank / No Start" class="services__spoller-label">
+              No Crank / No Start
+            </label>
+            <input type="checkbox" id="Crank / No Start" class="input-check" />
+            <label for="Crank / No Start" class="services__spoller-label"> Crank / No Start </label>
+          </div>
+        </div>
+      </div>
+      <div class="services__item diagnostic">
+        <input type="checkbox" id="A/C Not Working" class="input-check simple-input-check" />
+        <label for="A/C Not Working" class="btn services__spoller-btn services__spoller-btn--check">
+          <span class="diagnostic-title">A/C Not Working</span>
+          <div class="label-check"></div>
+        </label>
+      </div>
+      <div class="services__item diagnostic">
+        <input type="checkbox" id="Unknown Vibrations" class="input-check simple-input-check" />
+        <label
+          for="Unknown Vibrations"
+          class="btn services__spoller-btn services__spoller-btn--check"
+        >
+          <span class="diagnostic-title">Unknown Vibrations</span>
+          <div class="label-check"></div>
+        </label>
+      </div>
+    </div>
+    <!-- <div class="services__body">
+      <div class="services__item">
+        <button data-spoller class="btn services__spoller-btn">
+          <div class="services__spoller-btn-info">
+            <h5 class="title services__spoller-title">Date & Time</h5>
+            <span class="services__spoller-content"
+              >Your order will be closed automatically one week after placing this order if no
+              quotes are accepted</span
+            >
+          </div>
+          <svg class="services__spoller-arrow">
+            <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+          </svg>
+          <input
+            type="checkbox"
+            id="Vehicle will not start"
+            name="Vehicle will not start"
+            class="input-check"
+          />
+          <label for="Vehicle will not start" class="label-check"></label>
+        </button>
+        <div class="services__spoller-item">
+          <div class="services__spoller-item-wrapper">
+            <input type="checkbox" id="Next Available Opening" class="input-check" />
+            <label
+              for="Next Available Opening"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--mini"
+            >
+              <span>Next Available Opening</span>
+              <div class="label-check"></div>
+            </label>
+            <input type="checkbox" id="available-date" class="input-check" />
+            <label
+              for="available-date"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--mini toggle-services-btn"
+            >
+              <span>Select Available Date Range</span>
+              <div class="label-check"></div>
+            </label>
+            <div class="services__date-nav">
+              <div class="select services__select-date">
+                <button class="btn select__btn">
+                  <input type="text" id="available-date-month-start" class="input-show" />
+                  <span>Month</span>
+                  <svg class="select__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="select__item scrollbar">
+                  <ul class="list">
+                    <li class="select__item-btn">January</li>
+                    <li class="select__item-btn">February</li>
+                    <li class="select__item-btn">March</li>
+                    <li class="select__item-btn">April</li>
+                    <li class="select__item-btn">May</li>
+                    <li class="select__item-btn">June</li>
+                    <li class="select__item-btn">July</li>
+                    <li class="select__item-btn">August</li>
+                    <li class="select__item-btn">September</li>
+                    <li class="select__item-btn">October</li>
+                    <li class="select__item-btn">November</li>
+                    <li class="select__item-btn">December</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select services__select-day">
+                <button class="btn select__btn">
+                  <input type="text" id="available-date-day-start" class="input-show" />
+                  <span>00</span>
+                  <svg class="select__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="select__item scrollbar">
+                  <ul class="list">
+                    <li class="select__item-btn">01</li>
+                    <li class="select__item-btn">02</li>
+                    <li class="select__item-btn">03</li>
+                    <li class="select__item-btn">04</li>
+                    <li class="select__item-btn">05</li>
+                    <li class="select__item-btn">06</li>
+                    <li class="select__item-btn">07</li>
+                    <li class="select__item-btn">08</li>
+                    <li class="select__item-btn">09</li>
+                    <li class="select__item-btn">10</li>
+                    <li class="select__item-btn">11</li>
+                    <li class="select__item-btn">12</li>
+                    <li class="select__item-btn">13</li>
+                    <li class="select__item-btn">14</li>
+                    <li class="select__item-btn">15</li>
+                    <li class="select__item-btn">16</li>
+                    <li class="select__item-btn">17</li>
+                    <li class="select__item-btn">18</li>
+                    <li class="select__item-btn">19</li>
+                    <li class="select__item-btn">20</li>
+                    <li class="select__item-btn">21</li>
+                    <li class="select__item-btn">22</li>
+                    <li class="select__item-btn">23</li>
+                    <li class="select__item-btn">24</li>
+                    <li class="select__item-btn">25</li>
+                    <li class="select__item-btn">26</li>
+                    <li class="select__item-btn">27</li>
+                    <li class="select__item-btn">28</li>
+                    <li class="select__item-btn">29</li>
+                    <li class="select__item-btn">30</li>
+                    <li class="select__item-btn">31</li>
+                  </ul>
+                </div>
+              </div>
+              <span>-</span>
+              <div class="select services__select-date">
+                <button class="btn select__btn">
+                  <input type="text" id="available-date-month-end" class="input-show" />
+                  <span>Month</span>
+                  <svg class="select__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="select__item scrollbar">
+                  <ul class="list">
+                    <li class="select__item-btn">January</li>
+                    <li class="select__item-btn">February</li>
+                    <li class="select__item-btn">March</li>
+                    <li class="select__item-btn">April</li>
+                    <li class="select__item-btn">May</li>
+                    <li class="select__item-btn">June</li>
+                    <li class="select__item-btn">July</li>
+                    <li class="select__item-btn">August</li>
+                    <li class="select__item-btn">September</li>
+                    <li class="select__item-btn">October</li>
+                    <li class="select__item-btn">November</li>
+                    <li class="select__item-btn">December</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select services__select-day">
+                <button class="btn select__btn">
+                  <input type="text" id="available-date-day-end" class="input-show" />
+                  <span>00</span>
+                  <svg class="select__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="select__item scrollbar">
+                  <ul class="list">
+                    <li class="select__item-btn">01</li>
+                    <li class="select__item-btn">02</li>
+                    <li class="select__item-btn">03</li>
+                    <li class="select__item-btn">04</li>
+                    <li class="select__item-btn">05</li>
+                    <li class="select__item-btn">06</li>
+                    <li class="select__item-btn">07</li>
+                    <li class="select__item-btn">08</li>
+                    <li class="select__item-btn">09</li>
+                    <li class="select__item-btn">10</li>
+                    <li class="select__item-btn">11</li>
+                    <li class="select__item-btn">12</li>
+                    <li class="select__item-btn">13</li>
+                    <li class="select__item-btn">14</li>
+                    <li class="select__item-btn">15</li>
+                    <li class="select__item-btn">16</li>
+                    <li class="select__item-btn">17</li>
+                    <li class="select__item-btn">18</li>
+                    <li class="select__item-btn">19</li>
+                    <li class="select__item-btn">20</li>
+                    <li class="select__item-btn">21</li>
+                    <li class="select__item-btn">22</li>
+                    <li class="select__item-btn">23</li>
+                    <li class="select__item-btn">24</li>
+                    <li class="select__item-btn">25</li>
+                    <li class="select__item-btn">26</li>
+                    <li class="select__item-btn">27</li>
+                    <li class="select__item-btn">28</li>
+                    <li class="select__item-btn">29</li>
+                    <li class="select__item-btn">30</li>
+                    <li class="select__item-btn">31</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <input type="checkbox" id="specific-date" class="input-check" />
+            <label
+              for="specific-date"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--mini toggle-services-btn"
+            >
+              <span>Select a Specific Date</span>
+              <div class="label-check"></div>
+            </label>
+            <div class="services__date-nav">
+              <div class="select services__select-date">
+                <button class="btn select__btn">
+                  <input type="text" id="specific-date-month" class="input-show" />
+                  <span>Month</span>
+                  <svg class="select__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="select__item scrollbar">
+                  <ul class="list">
+                    <li class="select__item-btn">January</li>
+                    <li class="select__item-btn">February</li>
+                    <li class="select__item-btn">March</li>
+                    <li class="select__item-btn">April</li>
+                    <li class="select__item-btn">May</li>
+                    <li class="select__item-btn">June</li>
+                    <li class="select__item-btn">July</li>
+                    <li class="select__item-btn">August</li>
+                    <li class="select__item-btn">September</li>
+                    <li class="select__item-btn">October</li>
+                    <li class="select__item-btn">November</li>
+                    <li class="select__item-btn">December</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select services__select-day">
+                <button class="btn select__btn">
+                  <input type="text" id="specific-date-day" class="input-show" />
+                  <span>00</span>
+                  <svg class="select__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </button>
+                <div class="select__item scrollbar">
+                  <ul class="list">
+                    <li class="select__item-btn">01</li>
+                    <li class="select__item-btn">02</li>
+                    <li class="select__item-btn">03</li>
+                    <li class="select__item-btn">04</li>
+                    <li class="select__item-btn">05</li>
+                    <li class="select__item-btn">06</li>
+                    <li class="select__item-btn">07</li>
+                    <li class="select__item-btn">08</li>
+                    <li class="select__item-btn">09</li>
+                    <li class="select__item-btn">10</li>
+                    <li class="select__item-btn">11</li>
+                    <li class="select__item-btn">12</li>
+                    <li class="select__item-btn">13</li>
+                    <li class="select__item-btn">14</li>
+                    <li class="select__item-btn">15</li>
+                    <li class="select__item-btn">16</li>
+                    <li class="select__item-btn">17</li>
+                    <li class="select__item-btn">18</li>
+                    <li class="select__item-btn">19</li>
+                    <li class="select__item-btn">20</li>
+                    <li class="select__item-btn">21</li>
+                    <li class="select__item-btn">22</li>
+                    <li class="select__item-btn">23</li>
+                    <li class="select__item-btn">24</li>
+                    <li class="select__item-btn">25</li>
+                    <li class="select__item-btn">26</li>
+                    <li class="select__item-btn">27</li>
+                    <li class="select__item-btn">28</li>
+                    <li class="select__item-btn">29</li>
+                    <li class="select__item-btn">30</li>
+                    <li class="select__item-btn">31</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="services__date-input">
+                <input type="time" value="00:00" class="input" id="specific-date-time" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services__body">
+      <div class="services__item">
+        <button data-spoller class="btn services__spoller-btn">
+          <div class="services__spoller-btn-info">
+            <h5 class="title services__spoller-title">Contact Preferences</h5>
+            <span class="services__spoller-content">
+              Select the contact information you want to share <br />
+              <br />
+              This data will only be shared with the auto shop that you choose to complete your
+              order
+            </span>
+          </div>
+          <svg class="services__spoller-arrow">
+            <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+          </svg>
+          <input
+            type="checkbox"
+            id="Vehicle will not start"
+            name="Vehicle will not start"
+            class="input-check"
+          />
+          <label for="Vehicle will not start" class="label-check"></label>
+        </button>
+        <div class="services__spoller-item">
+          <div class="services__spoller-item-wrapper">
+            <input type="checkbox" id="In-App Messaging" class="input-check" />
+            <label
+              for="In-App Messaging"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--clean"
+            >
+              <span>In-App Messaging</span>
+              <div class="label-check"></div>
+            </label>
+            <input type="checkbox" id="Phone Number (Text)" class="input-check" />
+            <label
+              for="Phone Number (Text)"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--clean"
+            >
+              <span>Phone Number (Text)</span>
+              <div class="label-check"></div>
+            </label>
+            <input type="checkbox" id="Phone Number (Call)" class="input-check" />
+            <label
+              for="Phone Number (Call)"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--clean"
+            >
+              <span>Phone Number (Call)</span>
+              <div class="label-check"></div>
+            </label>
+            <input type="checkbox" id="Email" class="input-check" />
+            <label
+              for="Email"
+              class="btn services__spoller-btn services__spoller-btn--check services__spoller-btn--clean"
+            >
+              <span>Email</span>
+              <div class="label-check"></div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="services__body">
+      <div class="services__item">
+        <button data-spoller class="btn services__spoller-btn">
+          <div class="services__spoller-btn-info">
+            <h5 class="title services__spoller-title">Additional Information</h5>
+          </div>
+          <svg class="services__spoller-arrow">
+            <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+          </svg>
+        </button>
+        <div class="services__spoller-item">
+          <div class="services__spoller-item-wrapper _col">
+            <div class="services__info-item">
+              <input type="text" placeholder="Enter Additional Notes" id="notes" class="input" />
+            </div>
+            <div class="services__info-item">
+              <span class="services__spoller-content">Upload Photo(s)</span>
+              <div class="services__info-input">
+                <input
+                  type="file"
+                  placeholder="Chose from Gallery"
+                  id="img"
+                  class="input-file"
+                  accept="image/png, image/jpeg, image/jpg, image/webp"
+                />
+                <label for="img" class="label-file">
+                  <span>Chose from Gallery</span>
+                  <svg class="label-file__arrow">
+                    <use xlink:href="img/icons/icons.svg#icon-arrow"></use>
+                  </svg>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <a href="#" class="btn-simple services__btn-order">Place order</a>
+  </div>
+</section>
